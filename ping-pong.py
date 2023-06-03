@@ -39,9 +39,8 @@ window = display.set_mode((width,height))
 display.set_caption('Пинге понге')
 
 
-back = (200, 255, 255)
-window.fill(back)
-
+img_back = "images.jpg"
+background = transform.scale(image.load(img_back), (width,height))
 finish = False
 
 game = True
@@ -71,7 +70,7 @@ while game:
         if e.type == QUIT:
             game = False
     if finish != True:
-        window.fill(back)
+        window.blit(background, (0, 0))        
         text_1 = font2.render('Счёт 1 игрока: ' + str(score_1), True, (0,0,0))
         window.blit(text_1, (10, 10))
 
