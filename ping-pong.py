@@ -39,7 +39,7 @@ window = display.set_mode((width,height))
 display.set_caption('Пинге понге')
 
 
-img_back = "images.jpg"
+img_back = "background.jpg"
 background = transform.scale(image.load(img_back), (width,height))
 finish = False
 
